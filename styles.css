@@ -35,6 +35,7 @@ body {
     background-color: #bbada0;
     padding: 10px;
     border-radius: 10px;
+    position: relative;
 }
 
 .tile {
@@ -48,4 +49,93 @@ body {
     font-weight: bold;
     color: #776e65;
     border-radius: 10px;
+    position: absolute;
+    transition: all 0.2s ease; /* Smooth transition for animation */
+    transform: translate(0, 0);
+}
+
+.tile.new {
+    background-color: #eee4da; /* Color for new tiles */
+}
+
+.tile.merge {
+    background-color: #f0b27a; /* Color for merging tiles */
+    animation: merge 0.2s ease; /* Apply merge animation */
+}
+
+@keyframes merge {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+/* Tile Colors */
+.tile[data-value="2"] {
+    background-color: #eee4da;
+    color: #776e65;
+}
+
+.tile[data-value="4"] {
+    background-color: #ede0c8;
+    color: #776e65;
+}
+
+.tile[data-value="8"] {
+    background-color: #f2b179;
+    color: #f9f6f2;
+}
+
+.tile[data-value="16"] {
+    background-color: #f59563;
+    color: #f9f6f2;
+}
+
+.tile[data-value="32"] {
+    background-color: #f67c5f;
+    color: #f9f6f2;
+}
+
+.tile[data-value="64"] {
+    background-color: #f65e3b;
+    color: #f9f6f2;
+}
+
+.tile[data-value="128"] {
+    background-color: #edcf72;
+    color: #f9f6f2;
+}
+
+.tile[data-value="256"] {
+    background-color: #edcc61;
+    color: #f9f6f2;
+}
+
+.tile[data-value="512"] {
+    background-color: #edc850;
+    color: #f9f6f2;
+}
+
+.tile[data-value="1024"] {
+    background-color: #edc53f;
+    color: #f9f6f2;
+}
+
+.tile[data-value="2048"] {
+    background-color: #edc22e;
+    color: #f9f6f2;
 }

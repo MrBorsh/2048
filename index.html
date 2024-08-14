@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>2048</h1>
+            <div class="score-container">Score: <span id="score">0</span></div>
+            <button id="new-game">New Game</button>
+        </div>
+        <div class="grid-container">
+            <!-- 16 tiles for a 4x4 grid -->
+            <div class="grid">
+                <div class="tile" data-x="0" data-y="0"></div>
+                <div class="tile" data-x="0" data-y="1"></div>
+                <div class="tile" data-x="0" data-y="2"></div>
+                <div class="tile" data-x="0" data-y="3"></div>
+
+                <div class="tile" data-x="1" data-y="0"></div>
+                <div class="tile" data-x="1" data-y="1"></div>
+                <div class="tile" data-x="1" data-y="2"></div>
+                <div class="tile" data-x="1" data-y="3"></div>
+
+                <div class="tile" data-x="2" data-y="0"></div>
+                <div class="tile" data-x="2" data-y="1"></div>
+                <div class="tile" data-x="2" data-y="2"></div>
+                <div class="tile" data-x="2" data-y="3"></div>
+
+                <div class="tile" data-x="3" data-y="0"></div>
+                <div class="tile" data-x="3" data-y="1"></div>
+                <div class="tile" data-x="3" data-y="2"></div>
+                <div class="tile" data-x="3" data-y="3"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
